@@ -4,7 +4,7 @@ function add() {
     secondOperand = Number($("#second-operand").val());
     result = firstOperand + secondOperand;
     console.log(result);
-    $("#result").html(result);
+    $("#result").append(result);
 }
 
 function subtract() {
@@ -12,7 +12,7 @@ function subtract() {
     secondOperand = Number($("#second-operand").val());
     result = firstOperand - secondOperand;
     console.log(result);
-    $("#result").html(result);
+    $("#result").append(result);
 }
 
 function mulitply() {
@@ -20,7 +20,7 @@ function mulitply() {
     secondOperand = Number($("#second-operand").val());
     result = firstOperand * secondOperand;
     console.log(result);
-    $("#result").html(result);
+    $("#result").append(result);
 }
 
 function divide() {
@@ -28,7 +28,15 @@ function divide() {
     secondOperand = Number($("#second-operand").val());
     result = firstOperand / secondOperand;
     console.log(result);
-    $("#result").html(result);
+    $("#result").append(result);
+}
+
+function power() {
+    firstOperand = Number($("#first-operand").val());
+    secondOperand = Number($("#second-operand").val());
+    result = Math.pow(firstOperand, secondOperand);
+    console.log(result);
+    $("#result").append(result);
 }
 
 
@@ -41,6 +49,7 @@ function setup() {
     $("#sub").click(subtract);
     $("#multi").click(mulitply);
     $("#divide").click(divide);
+    $("#power").click(power);
     
 }
 
